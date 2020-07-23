@@ -45,10 +45,6 @@ if args.base_model == "places365":
 if args.base_model == "imagenet":
   base_model = VGG16(weights='imagenet', include_top = False)
 
-
-
-
-
 features = base_model.predict(image)
 features = features.reshape((features.shape[0], 512*7*7))
 predictions_to_return = 5
